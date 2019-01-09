@@ -43,7 +43,7 @@ origin：发送消息窗口的源（协议+主机+端口号）
   window.name = '你好'
 ```
 
-6. window.name
+6. docmument.domain
 ```
 只适合使用在二级域名的情况 
 模拟 在etc/hots 设置二级域名   
@@ -104,3 +104,4 @@ vue-cli 2.0
 9. nginx反向代理
 
 10. node中间件代理 
+ 
