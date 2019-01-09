@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jsonp</title>
+    <script src="../node_modules/jquery/dist/jquery.js"> </script>
+</head>
+<body>
+    <script>
+       $.ajax({
+          url:'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=a',
+          type:'GET',
+          dataType:"jsonp",
+          data:{wd:"a"},
+          jsonp:"jsonpCallback", //代替默认的callback=?    
+          jsonpCallback:"a",//回调方法 
+          success:function(data){
+              console.log(data)
+          }
+        })
+    </script>
+</body>
+</html>

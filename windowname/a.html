@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    我是a页面
+    <iframe src="http://127.0.0.1:3000/c.html" frameborder="0" id="frame" onload="load()"></iframe>
+    <script>
+      let firstload = true;
+       function load(){
+          let frame = document.getElementById('frame') ;
+          if(firstload){
+             frame.src= 'http://localhost:3000/b.html'
+             firstload = false
+         }else{
+             console.log(frame.contentWindow.name)
+         } 
+      }
+    </script>
+</body>
+</html>

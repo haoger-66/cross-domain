@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    我是a页面
+     <iframe src="http://b.abc.com:3000/b.html" frameborder="0" id="frame"  onload="load()"></iframe>
+</body>
+<script>
+  document.domain = 'abc.com'
+  // frame.contentWindow  b页面的window
+  let frame = document.getElementById('frame');
+   function load(){
+    console.log(frame.contentWindow.a) 
+  }
+  
+</script>
+</html>

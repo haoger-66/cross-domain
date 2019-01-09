@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    我是b页面 
+    <script>
+      window.onmessage=function(e){
+         console.log(e.data) //访问a页面打印 但是是b页面的打印结果 
+          e.source.postMessage('你也是好人',e.origin)
+      }
+    </script>
+</body>
+</html>

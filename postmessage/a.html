@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    我是a页面
+    <iframe src="http://127.0.0.1:3000/b.html" frameborder="0" id="frame" onload="load()"></iframe>
+</body>
+<script>
+  // postMessage html5的  
+  let frame = document.getElementById('frame');
+  function load(){
+    // a页面通过b页面的window 给b页面发消息 
+     frame.contentWindow.postMessage('你是好人','http://127.0.0.1:3000')
+     window.onmessage=function(e){
+       console.log(e.data)
+     }
+  }
+</script>
+</html>
