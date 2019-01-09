@@ -44,8 +44,7 @@ origin：发送消息窗口的源（协议+主机+端口号）
 ```
 
 6. window.name
-
-``
+```
 只适合使用在二级域名的情况 
 模拟 在etc/hots 设置二级域名   
  window hots目录 
@@ -53,7 +52,6 @@ origin：发送消息窗口的源（协议+主机+端口号）
   访问的页面 
   http://a.abc.com:3000/a.html  http://b.abc.com:3000/b.html 
 ```
-
 7. websoket
 ```
 前端 一般用socket.io进行兼容 
@@ -81,7 +79,7 @@ wss.on('connection',function(ws){
 ```
 8. webpack代理 
 ```
-    vue-cli 2.0 
+vue-cli 2.0 
     config/index.js 
     proxyTable: {
       '/':{
